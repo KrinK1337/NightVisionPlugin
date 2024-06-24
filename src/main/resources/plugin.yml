@@ -1,4 +1,11 @@
 name: nightvision
-main: com.thekrinker.nightvision.nightvision.Plugin
+main: com.thekrinker.nightvision.nightvision.Main
 version: 0.1
 api-version: 1.15
+commands:
+  nv:
+    description: Enable/Disable Night Vision.
+    permission: nightvision.nightvision
+  nightvision:
+    description: Enable/Disable NightVision.
+    permission: nightvision.nightvision
