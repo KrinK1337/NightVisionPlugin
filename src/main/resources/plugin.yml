@@ -1,11 +1,8 @@
-name: nightvision
+name: NightVision
 main: com.thekrinker.nightvision.Main
-version: 0.1
+version: 1.0.0
 api-version: 1.15
 commands:
-  nv:
-    description: Enable/Disable Night Vision.
-    permission: nightvision.nightvision
   nightvision:
     description: Enable/Disable NightVision.
     permission: nightvision.nightvision

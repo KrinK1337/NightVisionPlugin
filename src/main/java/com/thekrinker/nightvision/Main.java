@@ -8,6 +8,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class Main extends JavaPlugin
 {
   private static final Logger LOGGER=Logger.getLogger("NightVision");
@@ -20,20 +22,28 @@ public class Main extends JavaPlugin
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
     //Gives the player night vision if /nv or /nightvision
-    if ( command.getName().equalsIgnoreCase("nv") || command.getName().equalsIgnoreCase("nightvision")) {
+    if(command.getName().equalsIgnoreCase("nightvision")) {
 
       //Check if a Player sent the command
       if (sender instanceof Player){
+
         Player p = (Player) sender;
 
         //Checks if the player already has Night Vision applied
         PotionEffect effect = p.getPotionEffect( PotionEffectType.NIGHT_VISION );
+      
         if ( effect != null ){
+
           //Removes Night Vision effect as the player already had it
           p.removePotionEffect(PotionEffectType.NIGHT_VISION);
+          p.sendMessage(ChatColor.RED + "Night Vision Disabled!");
+
         } else{
+
           //Adds Night Vision to player
           p.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, Integer.MAX_VALUE,0, false, false), true);
+          p.sendMessage(ChatColor.DARK_GREEN + "Night Vision Enabled!");
+          
         }
       }
     }

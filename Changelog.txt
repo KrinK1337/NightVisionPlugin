@@ -1,0 +1,6 @@
+#Changelog for the Night Vision plugin
+#Author TheKrinKer
+
+v1.0.0 - 08/07/2024
+Displayes a message in chat upon command /NightVision command
+Removed /NV command to avoid conflicts with other plugins. Use /NightVision instead or set up an alias in commands.yml

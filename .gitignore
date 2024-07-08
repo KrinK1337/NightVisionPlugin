@@ -1,0 +1,5 @@
+#Folders to ignore
+/target/
+
+#.txt files to ignore
+todo.txt
